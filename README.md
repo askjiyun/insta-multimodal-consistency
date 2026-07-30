@@ -1,5 +1,7 @@
 # insta-multimodal-consistency
 
+[![DOI](https://zenodo.org/badge/1316687960.svg)](https://doi.org/10.5281/zenodo.21703134)
+
 Reproducible experiments for **Korean image–hashtag semantic consistency** using **CLIP / KoCLIP**.
 
 This repository accompanies the paper:
