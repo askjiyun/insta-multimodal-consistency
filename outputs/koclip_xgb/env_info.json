@@ -1,0 +1,10 @@
+{
+  "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:12:32) [Clang 20.1.8 ]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "torch": "2.11.0",
+  "transformers": "5.6.2",
+  "sklearn": "1.8.0",
+  "cuda_available": false,
+  "mps_available": true,
+  "device": "mps"
+}

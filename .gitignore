@@ -1,0 +1,22 @@
+# Images are distributed separately (available upon request) — never commit
+images/
+
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Model artifacts (large / regenerable)
+*.pt
+*.pth
+*.joblib
+
+# Annotation runtime leftovers
+labels_failed.csv

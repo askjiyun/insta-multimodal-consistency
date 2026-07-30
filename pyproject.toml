@@ -1,0 +1,38 @@
+[project]
+name = "insta-cv"
+version = "0.1.0"
+description = "Grouped 5-fold CV re-evaluation harness for CLIP/koCLIP image-hashtag consistency baselines"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "torch",
+    "torchvision",
+    "transformers",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "pillow",
+    "matplotlib",
+    "seaborn",
+    "tqdm",
+    "python-dotenv",
+    "xgboost",
+    "joblib",
+]
+
+# src/ is a flat module directory with no __init__.py, so this project is not
+# an installable package (run_cv.py pulls in src/ directly via sys.path.insert).
+# uv only manages this venv and does not editable-install the project itself.
+[tool.uv]
+package = false
+
+# Route torch/torchvision exclusively through the CUDA 12.8 wheel index
+# (GPU machine only; no cross-platform fallback needed since this project
+# isn't run on the local Mac anyway).
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128" }]
+torchvision = [{ index = "pytorch-cu128" }]
